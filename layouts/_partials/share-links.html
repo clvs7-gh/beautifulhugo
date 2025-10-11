@@ -1,11 +1,27 @@
 <!-- Social Share Button HTML -->
 <div class="share-box" role="region">
     <ul class="share" aria-label="Social sharing" role="list">
-      <!-- Twitter -->
+      <!-- X -->
       <li role="listitem">
-        <a href="//twitter.com/share?url={{ .Permalink }}&amp;text={{ .Title }}{{ with .Site.Params.author.twitter }}&amp;via={{ . }}{{ end }}" target="_blank" rel="noopener noreferrer" title="Share on Twitter">
-          <i class="fab fa-twitter" aria-hidden="true"></i>
-          <span class="visually-hidden">Share on Twitter</span>
+        <a href="//x.com/share?url={{ .Permalink }}&amp;text={{ .Title }}{{ with .Site.Params.author.twitter }}&amp;via={{ . }}{{ end }}" target="_blank" rel="noopener noreferrer" title="Share on X">
+          <i class="fab fa-x-twitter" aria-hidden="true"></i>
+          <span class="visually-hidden">Share on X</span>
+        </a>
+      </li>
+
+      <!-- LINE -->
+      <li role="listitem">
+        <a href="//social-plugins.line.me/lineit/share?url={{ .Permalink }}&amp;text={{ .Title }}" target="_blank" rel="noopener noreferrer" title="Share on LINE">
+          <i class="fab fa-line" aria-hidden="true"></i>
+          <span class="visually-hidden">Share on LINE</span>
+        </a>
+      </li>
+
+      <!-- Threads -->
+      <li role="listitem">
+        <a href="//www.threads.net/intent/post?url={{ .Permalink }}&amp;text={{ .Title }}" target="_blank" rel="noopener noreferrer" title="Share on Threads">
+          <i class="fab fa-threads" aria-hidden="true"></i>
+          <span class="visually-hidden">Share on Threads</span>
         </a>
       </li>
 
@@ -30,22 +46,6 @@
         <a href="//www.linkedin.com/shareArticle?url={{ .Permalink }}&amp;title={{ .Title }}" target="_blank" rel="noopener noreferrer" title="Share on LinkedIn">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
           <span class="visually-hidden">Share on LinkedIn</span>
-        </a>
-      </li>
-
-      <!-- Pinterest -->
-      <li role="listitem">
-        <a href="//www.pinterest.com/pin/create/button/?url={{ .Permalink }}&amp;description={{ .Title }}" target="_blank" rel="noopener noreferrer" title="Share on Pinterest">
-          <i class="fab fa-pinterest" aria-hidden="true"></i>
-          <span class="visually-hidden">Share on Pinterest</span>
-        </a>
-      </li>
-
-      <!-- Email -->
-      <li role="listitem">
-        <a href="mailto:?body={{ .Permalink }}&amp;subject={{ .Title }}" title="Share via email">
-          <i class="fas fa-at" aria-hidden="true"></i>
-          <span class="visually-hidden">Share via email</span>
         </a>
       </li>
     </ul>
