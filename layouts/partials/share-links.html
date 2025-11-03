@@ -17,6 +17,14 @@
         </a>
       </li>
 
+      <!-- Telegram -->
+      <li role="listitem">
+        <a href="//t.me/share/url?url={{ .Permalink }}&amp;text={{ .Title }}" target="_blank" rel="noopener noreferrer" title="Share on Telegram">
+          <i class="fab fa-telegram" aria-hidden="true"></i>
+          <span class="visually-hidden">Share on Telegram</span>
+        </a>
+      </li>
+
       <!-- Threads -->
       <li role="listitem">
         <a href="//www.threads.net/intent/post?url={{ .Permalink }}&amp;text={{ .Title }}" target="_blank" rel="noopener noreferrer" title="Share on Threads">
@@ -30,22 +38,6 @@
         <a href="//www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" rel="noopener noreferrer" title="Share on Facebook">
           <i class="fab fa-facebook" aria-hidden="true"></i>
           <span class="visually-hidden">Share on Facebook</span>
-        </a>
-      </li>
-
-      <!-- Reddit -->
-      <li role="listitem">
-        <a href="//reddit.com/submit?url={{ .Permalink }}&amp;title={{ .Title }}" target="_blank" rel="noopener noreferrer" title="Share on Reddit">
-          <i class="fab fa-reddit" aria-hidden="true"></i>
-          <span class="visually-hidden">Share on Reddit</span>
-        </a>
-      </li>
-
-      <!-- LinkedIn -->
-      <li role="listitem">
-        <a href="//www.linkedin.com/shareArticle?url={{ .Permalink }}&amp;title={{ .Title }}" target="_blank" rel="noopener noreferrer" title="Share on LinkedIn">
-          <i class="fab fa-linkedin" aria-hidden="true"></i>
-          <span class="visually-hidden">Share on LinkedIn</span>
         </a>
       </li>
     </ul>
