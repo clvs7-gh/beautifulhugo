@@ -993,3 +993,12 @@ h4.see-also {
     background-color: #e0e0e0;
   }
   
+.blog-pager .previous>a,
+.blog-pager .previous>span {
+  float: right;
+}
+
+.blog-pager .next>a,
+.blog-pager .next>span {
+  float: left;
+}
