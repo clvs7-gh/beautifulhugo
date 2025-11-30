@@ -61,20 +61,20 @@
       </article>
 
       {{ if and (ne .Type "page") (default true ($.Param "showPostNav")) }}
-        {{ if .PrevInSection }}
-          <a href="{{ .PrevInSection.RelPermalink }}" class="nav-side-arrow nav-side-prev" title="{{ .PrevInSection.Title }}" aria-label="{{ i18n "previousPost" }}: {{ .PrevInSection.Title }}">
+        {{ if .NextInSection }}
+          <a href="{{ .NextInSection.RelPermalink }}" class="nav-side-arrow nav-side-prev" title="{{ .NextInSection.Title }}" aria-label="{{ i18n "nextPost" }}: {{ .NextInSection.Title }}">
             <i class="fas fa-chevron-left"></i>
           </a>
         {{ end }}
-        {{ if .NextInSection }}
-          <a href="{{ .NextInSection.RelPermalink }}" class="nav-side-arrow nav-side-next" title="{{ .NextInSection.Title }}" aria-label="{{ i18n "nextPost" }}: {{ .NextInSection.Title }}">
+        {{ if .PrevInSection }}
+          <a href="{{ .PrevInSection.RelPermalink }}" class="nav-side-arrow nav-side-next" title="{{ .PrevInSection.Title }}" aria-label="{{ i18n "previousPost" }}: {{ .PrevInSection.Title }}">
             <i class="fas fa-chevron-right"></i>
           </a>
         {{ end }}
         <ul class="post-pager blog-post-pager">
-          {{ if .PrevInSection }}
+          {{ if .NextInSection }}
             <li class="pager-prev">
-              <a href="{{ .PrevInSection.RelPermalink }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ .PrevInSection.Title }}"><i class="fas fa-chevron-left"></i> {{ i18n "previousPost" }}</a>
+              <a href="{{ .NextInSection.RelPermalink }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ .NextInSection.Title }}"><i class="fas fa-chevron-left"></i> {{ i18n "nextPost" }}</a>
             </li>
           {{ else }}
             <li class="pager-prev"></li>
@@ -82,9 +82,9 @@
           <li class="pager-center">
             {{ partial "show-source" . }}
           </li>
-          {{ if .NextInSection }}
+          {{ if .PrevInSection }}
             <li class="pager-next">
-              <a href="{{ .NextInSection.RelPermalink }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ .NextInSection.Title }}">{{ i18n "nextPost" }} <i class="fas fa-chevron-right"></i></a>
+              <a href="{{ .PrevInSection.RelPermalink }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ .PrevInSection.Title }}">{{ i18n "previousPost" }} <i class="fas fa-chevron-right"></i></a>
             </li>
           {{ else }}
             <li class="pager-next"></li>
