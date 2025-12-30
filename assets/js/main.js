@@ -160,7 +160,7 @@ var main = {
 
   setImg : function(src, desc, position) {
     var header = document.querySelector('.intro-header.big-img');
-    header.style.backgroundImage = 'url(' + src + ')';
+    header.style.backgroundImage = 'linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.5)),url(' + src + ')';
     // Reset background-position if the previous image set one.
     header.style.backgroundPosition = position !== null ? position : '';
 
