@@ -691,7 +691,8 @@ footer div.disclaimer {
   */
   .intro-header.big-img {
     width: 100%;
-    height: 220px;
+    /* Don't respect aspect ratio */
+    /* height: 220px; */
   }
   .intro-header.big-img .page-heading,
   .intro-header.big-img .post-heading {
