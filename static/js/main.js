@@ -131,7 +131,7 @@ var main = {
   },
 
   setImg : function(src, desc, position) {
-  $(".intro-header.big-img").css("background-image", 'url(' + src + ')');
+  $(".intro-header.big-img").css("background-image", 'linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.5)),url(' + src + ')');
   if (position !== undefined) {
     $(".intro-header.big-img").css("background-position", position);
   }
