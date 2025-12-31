@@ -1,7 +1,7 @@
-{{- with .Title | default .Site.Title }}
+{{- with $.Scratch.Get "Title" | default .Title | default .Site.Title }}
 <meta property="og:title" content="{{ . }}" />
 {{- end }}
-{{- with .Description | default .Params.subtitle | default .Summary }}
+{{- with $.Scratch.Get "Description" | default .Description | default .Params.subtitle | default .Summary }}
 <meta property="og:description" content="{{ . }}">
 {{- end }}
 {{- with .Params.share_img | default .Params.image | default .Site.Params.logo }}
