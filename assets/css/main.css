@@ -218,6 +218,15 @@ img::selection {
   .theme-toggle {
     padding: .5rem;
   }
+  .navbar-custom .navbar-brand {
+    flex: 1 1 0;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .navbar-custom .navbar-brand + .d-flex {
+    flex-shrink: 0;
+  }
   .container {
     max-width: 95%;
   }
