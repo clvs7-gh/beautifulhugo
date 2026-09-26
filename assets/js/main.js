@@ -197,7 +197,7 @@ var main = {
         imageDesc.append(link);
       }
     });
-    imageDesc.style.display = '';
+    imageDesc.style.display = 'inline';
   }
 };
 
